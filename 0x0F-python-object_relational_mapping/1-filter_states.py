@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-Script that lists all states from the database hbtn_0e_0_usa.
+Script that lists all states with a name starting with N
+(upper N) from the database hbtn_0e_0_usa.
 Parameters for script: mysql username, mysql password, database name.
 Must use the `MySQLdb` module.
 Script should connect to a MySQL server runnimg on `localhost` at port `3306`
