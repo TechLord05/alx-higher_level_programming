@@ -33,7 +33,8 @@ if __name__ == "__main__":
 
     # Loop through the Rows variable to output result
     for row in rows:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
 
     # Close the cursor and db connection
     cursor.close()
