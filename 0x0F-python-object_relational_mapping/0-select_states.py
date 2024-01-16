@@ -24,18 +24,17 @@ if __name__ == "__main__":
 
     # Create a cursor object
     cursor = db.cursor()
-    
+
     # Use the cursor object to execute SQL queries
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
     # Fetch the result
     rows = cursor.fetchall()
-    
+
     # Loop through the Rows variable to output result
     for row in rows:
         print(row)
-    
+
     # Close the cursor and db connection
     cursor.close()
     db.close()
-    
