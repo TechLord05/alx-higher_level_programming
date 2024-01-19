@@ -25,8 +25,8 @@ if __name__ == "__main__":
             name = %(state)s
         ORDER BY
             states.id
-        """, {'state' : sys.argv[4]})
-    
+        """, {'state': sys.argv[4]})
+
     rows = cursor.fetchall()
     for row in rows:
         print(row)
