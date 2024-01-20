@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that prints the State object with the name passed as argument"""
+"""Module that adds the state Louisiana"""
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -16,15 +16,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id).all()
+    new_state = State(name='Louisiana')
 
-    found = False
-    for state in states:
-        if argv[4] == state.name:
-            print("{}".format(state.id))
-            found = True
+    session.add(new_state)
+    session.commit()
 
-    if (not found):
-        print("Not found")
+    print(new_state.id)
 
     session.close()
